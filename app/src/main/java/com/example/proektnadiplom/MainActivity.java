@@ -23,20 +23,19 @@ public class MainActivity extends AppCompatActivity {
         });
         initBooks = findViewById(R.id.initbooks);
         initBooks.setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivity.this, BookAdapterRV.class);
+            Intent intent = new Intent(MainActivity.this, BookAdapter.class);
             startActivity(intent);
         });
         myDetails = findViewById(R.id.mydetails);
-        myDetails.setOnClickListener(v -> {
+        /*myDetails.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, MyDetails.class);
             startActivity(intent);
-        });
+        });*/
         newDetails = findViewById(R.id.newdetails);
         newDetails.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, NewDetails.class);
             startActivity(intent);
         });
-
 
 
     }

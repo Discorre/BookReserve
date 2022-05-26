@@ -52,9 +52,6 @@ public class NewDetails extends AppCompatActivity {
             etnewsurename.setText(userCursor.getString(3));
             etnewnumpass.setText(String.valueOf(userCursor.getInt(4)));
             etnewbirthday.setText(userCursor.getString(5));
-
-
-
         }
 
 

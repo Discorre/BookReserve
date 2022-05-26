@@ -1,3 +1,4 @@
+
 package com.example.proektnadiplom;
 
 
@@ -36,6 +37,7 @@ public class Details extends AppCompatActivity {
 }
 
 
+
     /*private String newname;
     private String newfamile;
     private String newsurname;
@@ -70,4 +72,3 @@ public class Details extends AppCompatActivity {
         return newbirthday;
     }
 }*/
-
