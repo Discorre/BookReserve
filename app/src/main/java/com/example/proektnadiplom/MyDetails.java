@@ -20,7 +20,7 @@ public class MyDetails extends AppCompatActivity {
     TextView username, famname, surname, numpass, birthday;
     Button remove, update;
     AppDatabaseUsers library = Room.databaseBuilder(getApplicationContext(),
-                    AppDatabaseUsers.class, "library")
+                    AppDatabaseUsers.class, "library.db")
             .allowMainThreadQueries()
             .build();
 

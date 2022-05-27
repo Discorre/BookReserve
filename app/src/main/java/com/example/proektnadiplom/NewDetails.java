@@ -34,6 +34,9 @@ public class NewDetails extends AppCompatActivity {
         etnewnumpass = findViewById(R.id.newnumpass);
         etnewbirthday = findViewById(R.id.newbirthday);
         btnok = findViewById(R.id.btnok);
+        btnok.setOnClickListener(v -> {
+
+        });
 
         databaseHelper = new DatabaseHelper(this);
         /*library = databaseHelper.getWritableDatabase();*/
@@ -45,7 +48,10 @@ public class NewDetails extends AppCompatActivity {
             userID = extras.getLong("id");
         }
         if (userID > 0) {
-            userCursor = library.rawQuery("SELECT * FROM " + DatabaseHelper.TABLE + " WHERE " + DatabaseHelper.COLUMN_ID + "=?", new String[]{String.valueOf(userID)});
+            userCursor = library.rawQuery("SELECT * FROM "
+                    + DatabaseHelper.TABLE + " WHERE "
+                    + DatabaseHelper.COLUMN_ID + "=?"
+                    , new String[]{String.valueOf(userID)});
             userCursor.moveToFirst();
             etnewname.setText(userCursor.getString(1));
             etnewfamile.setText(userCursor.getString(2));

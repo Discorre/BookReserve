@@ -22,18 +22,19 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("CREATE TABLE users(" + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
+        db.execSQL("CREATE TABLE IF NOT EXISTS " + TABLE + " ("
+                + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + COLUMN_FAMILE + " TEXT NOT NULL, "
                 + COLUMN_NAME + " TEXT NOT NULL, "
                 + COLUMN_SURNAME + " TEXT NOT NULL, "
                 + COLUMN_NUMPASS + " INTEGER NOT NULL, "
-                + COLUMN_BIRTHDAY + " DATE NOT NULL);");
-        db.execSQL("INSERT INTO " + TABLE
-                + " (" + COLUMN_FAMILE + ", "
+                + COLUMN_BIRTHDAY + " DATE NOT NULL );");
+        db.execSQL("INSERT INTO " + TABLE + " ("
+                + COLUMN_FAMILE + ", "
                 + COLUMN_NAME + ", "
                 + COLUMN_SURNAME + ", "
                 + COLUMN_NUMPASS + ", "
-                + COLUMN_BIRTHDAY + ") VALUES ('Михайлов','Егор','Сергеевич','8113000000','31.19.99');");
+                + COLUMN_BIRTHDAY + ") VALUES ('Михайлов','Егор','Сергеевич','8113000000','31.12.99' );");
     }
 
     @Override

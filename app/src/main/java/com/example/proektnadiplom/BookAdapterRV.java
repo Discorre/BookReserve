@@ -98,9 +98,9 @@ public class BookAdapterRV extends RecyclerView.Adapter<BookAdapterRV.ViewHolder
         Books books = Books.get(position);
         holder.bname.setText(books.getName());
         holder.author.setText(books.getAuthor());
-        holder.resbtn.setOnClickListener(v -> {
+        /*holder.resbtn.setOnClickListener(v -> {
 
-        });
+        });*/
     }
 
 
@@ -110,7 +110,7 @@ public class BookAdapterRV extends RecyclerView.Adapter<BookAdapterRV.ViewHolder
         return books.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public static class ViewHolder extends RecyclerView.ViewHolder {
         final Button resbtn;
         final TextView bname, author;
         public ViewHolder(@NonNull View v) {
